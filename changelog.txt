@@ -1,0 +1,22 @@
+# Autor: Elison/Nosile/slumonk
+# Nome da aplicação:  Controle de gastos
+# Linguagem: Python
+# Framework: kivy
+
+O principal objetivo desta aplicação é dá um melhor controle do dinheiro 
+do usuário. Além disso, precisa manter um visual limpo e agradavel.
+
+Suas principais caracteristas são:
+
+- Controle de entrada de dinheiro
+- Controle de gastos
+- Objetivos de aquisição de novos items
+- Historico com movimentações
+
+v 0.1 20/04/2019
+
+- Preparação do ambiente de desenvolvimento
+- Adicionado titulo da aplicação
+- Adicionado botões de troca de telas
+	- Tela Objetivos (Falta implementação
+	- Tela de historico (Falta implementação

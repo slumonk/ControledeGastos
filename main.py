@@ -9,12 +9,10 @@ class Manager(ScreenManager):
 
 class Home(Screen):
     pass
-class Menu(BoxLayout):
-    pass
 
-class MyApp(App):
+class ControleApp(App):
     def build(self):
        return Manager()
 
 if __name__ == '__main__':
-    MyApp().run()
+    ControleApp().run()

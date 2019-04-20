@@ -1,18 +1,32 @@
 <Manager>:
-    Home:
-        name: 'home'
-        id: home
+	Home:
+		name: 'home'
+		id: home
 <Home>:
-    Label:
-    Titulo:
-        text: 'CONTROLE DE GASTOS'
-
+	BoxLayout:
+		orientation: 'vertical'
+		Titulo:
+			text: 'CONTROLE DE GASTOS'
+		Menu:
 
 <Titulo@Label>:
-    size_hint_y: None
-    height: '60dp'
+	canvas.before:
+		Color:
+			rgba: (.94, .88, .78, 1)
+		Rectangle:
+			size: self.size
+			pos: self.pos
+	size_hint_y: None
+	height: '60dp'
+	font_size: '30sp'
+	bold: True
+	color: (0, 0, 0, 1)
 
-<Menu>:
-    Button:
-    Button:
-    Button: 
+<Menu@BoxLayout>:
+	size_hint_y: None
+	height: '70dp'
+	Button:
+	Button:
+		text: 'Home'
+		on_release: app.root.current = 'home'
+	Button: 
