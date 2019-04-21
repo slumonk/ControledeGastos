@@ -2,12 +2,14 @@
 	Home:
 		name: 'home'
 		id: home
-<Home>:
-	BoxLayout:
-		orientation: 'vertical'
-		Titulo:
-			text: 'CONTROLE DE GASTOS'
-		Menu:
+
+	Objetivos:
+		name: 'objetivos'
+		id: objetivo
+	
+	Historico:
+		name: 'historico'
+		id: historico
 
 <Titulo@Label>:
 	canvas.before:
@@ -22,11 +24,65 @@
 	bold: True
 	color: (0, 0, 0, 1)
 
-<Menu@BoxLayout>:
+<BotoesMenu@BoxLayout>:
 	size_hint_y: None
 	height: '70dp'
 	Button:
+		text: 'Objetivos'
+		on_release: app.root.current = 'objetivos'
 	Button:
 		text: 'Home'
 		on_release: app.root.current = 'home'
 	Button: 
+		text: 'historico'
+		on_release: app.root.current = 'historico'
+
+<Rodape>:
+	size_hint_y: None
+	height: '40dp'
+	Label:
+		text: 'Usuário: '
+	Label:
+		id: horario
+
+	Label:
+		text: '00/00'
+
+<Home>:
+	BoxLayout:
+		orientation: 'vertical'
+		Titulo:
+			text: 'CONTROLE DE GASTOS'
+		BotoesMenu:
+		BoxLayout:
+
+		Rodape:
+
+<Objetivos>:
+	BoxLayout:
+		orientation: 'vertical'
+		Titulo:
+			text: "Objetivos"
+		BotoesMenu:
+		BoxLayout:
+
+		Rodape:
+
+<Historico>:
+	BoxLayout:
+		orientation: 'vertical'
+		Titulo:
+			text: 'Movimentações'
+		
+		BotoesMenu:
+		BoxLayout:
+
+		Rodape:
+
+<LbPerson@Label>:
+	canvas:
+		Color:
+			rgba: (1, 1, 1, 0)
+
+<BoxPerson@BoxLayout>:
+	
