@@ -18,5 +18,10 @@ v 0.1 20/04/2019
 - Preparação do ambiente de desenvolvimento
 - Adicionado titulo da aplicação
 - Adicionado botões de troca de telas
-	- Tela Objetivos (Falta implementação
-	- Tela de historico (Falta implementação
+	- Tela Objetivos (Falta implementação)
+	- Tela de historico (Falta implementação)
+
+v 0.3 21/04/2019
+
+- Adicionado relogio no rodapé
+- Adicionado data no rodapé
