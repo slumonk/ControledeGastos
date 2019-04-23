@@ -6,8 +6,10 @@ from datetime import datetime
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.uix.popup import Popup
 from kivy.clock import Clock
 from kivy.properties import StringProperty
+
 
 class Manager(ScreenManager):
     pass
@@ -15,10 +17,8 @@ class Manager(ScreenManager):
 class Rodape(BoxLayout):
 	data_hora_atual = datetime.now()
 	data_atual = data_hora_atual.strftime('%d/%m/%Y')
-	#hora_atual = 	
 	def __init__(self, **kwargs):
 		super(Rodape, self).__init__(**kwargs)
-			
 		
 		Clock.schedule_interval(self.updateHora, 1)
 
@@ -29,7 +29,20 @@ class Rodape(BoxLayout):
 class Home(Screen):
 	def __init__(self, **kwargs):
 		super(Home, self).__init__(**kwargs)
-		#Clock.schendule_interval(Rodape().updateHora(), 1)
+
+	def alteraEntrada(self, *args):
+		self.verificador = 'entrada'
+		self.popAltera()
+
+	def alteraGastos(self, *args):
+		self.verificador = 'gastos'
+		self.popAltera()
+
+	def popAltera(self):
+		boxPop = BoxLayout(orientation='vertical')
+		self.pop = Popup(title='Alterar valores', content=boxPop,
+		size_hint=(None,None), size=(400, 500))
+		self.pop.open()
 
 class Objetivos(Screen):
 	pass

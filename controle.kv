@@ -54,6 +54,27 @@
 		Titulo:
 			text: 'CONTROLE DE GASTOS'
 		BotoesMenu:
+		GridLayout:
+			cols: 3
+			size_hint_y: None
+			height: '70'
+			Label:
+				text: 'Entrada:'
+			Label:
+				id: entrada
+				text: '0,00'
+			Button:
+				text: 'Alterar'
+				on_release: root.alteraEntrada()
+			Label:
+				text: 'Gastos'
+			Label:
+				id: gastos
+				text: '0,00'
+			Button:
+				text: 'Alterar'
+				on_release: root.alteraGastos()
+
 		BoxLayout:
 
 		Rodape:

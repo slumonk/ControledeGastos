@@ -25,3 +25,7 @@ v 0.3 21/04/2019
 
 - Adicionado relogio no rodapé
 - Adicionado data no rodapé
+
+v 0.5 22/04/2019
+- Adicionado menu para adicionar gastos e entradas de dinheiro
+- Adicionado Popup para alterar valor de gastos ou entrada
